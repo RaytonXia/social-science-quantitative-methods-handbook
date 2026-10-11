@@ -1,0 +1,49 @@
+---
+title: "教育与生育指标的地区关联：教学分析"
+format: html
+execute:
+  echo: true
+---
+
+## 引言
+
+【填写背景、真实文献、缺口和研究问题；这里没有替你生成文献综述。】
+
+## 方法
+
+本练习使用 R 的 swiss 历史地区数据，共 47 个观测。Education 的测量对象是征兵人群；Fertility 为标准化指标。分析旨在描述线性关联，不能识别个人层面的因果效应。
+
+```{r}
+d <- datasets::swiss
+fit <- lm(Fertility ~ Education, data = d)
+summary(d[c("Education", "Fertility")])
+```
+
+## 结果
+
+```{r}
+summary(fit)
+confint(fit)
+plot(d$Education, d$Fertility, xlab = "Education (%)", ylab = "Fertility index")
+abline(fit)
+```
+
+【依据输出填写带单位的估计值、区间与图注，再报告诊断。】
+
+```{r}
+par(mfrow = c(2, 2))
+plot(fit)
+par(mfrow = c(1, 1))
+```
+
+## 讨论
+
+【解释关联、对照真实文献；说明历史地区汇总、测量、遗漏因素、空间依赖与推广范围的局限。】
+
+## 可复现性与数据来源
+
+[R 官方数据说明](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/swiss.html)。
+
+```{r}
+sessionInfo()
+```

@@ -1,0 +1,24 @@
+* text=auto eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.ps1 text eol=crlf
+*.nsi text eol=crlf
+*.nsh text eol=crlf
+*.dll binary
+*.ico binary
+*.woff2 binary
+*.ttf binary
+*.wasm binary
+*.bcmap binary
+*.zip binary
+*.gz binary
+*.xlsx binary
+# Keep third-party files exactly as distributed.
+app/vendor/** -text -whitespace
+app/licenses/** -text -whitespace
+WebView2_LICENSE.txt -text -whitespace
+WebView2_NOTICE.txt -text -whitespace

@@ -1,0 +1,8 @@
+RSA reference manual
+Authors: Felix Schönbrodt & Sarah Humberg
+Version: 0.10.8
+Package license: GPL (>= 2), as stated on page 1.
+Unmodified CRAN manual: https://cran.r-project.org/web/packages/RSA/RSA.pdf
+Package and corresponding sources: https://cran.r-project.org/package=RSA
+License text: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+The official document and its attribution are preserved in full.

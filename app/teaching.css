@@ -1,0 +1,37 @@
+/* Method pages: six visible questions, worked examples, ordered output reading. */
+.question-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;border:1px solid #dce3e8;background:#dce3e8;border-radius:8px;overflow:hidden;margin:0 0 32px}
+.question-index a{background:#fbfcfc;padding:14px 17px;display:flex;align-items:baseline;gap:12px;color:#35516a;font-size:14px;line-height:1.6}
+.question-index a:hover{background:#edf3f5}.question-index a>span{font:15px Georgia,serif;color:#8193a0}
+.article .teaching-question{padding:30px 0 34px;margin:0;border-bottom:1px solid var(--line);scroll-margin-top:100px}
+.article .teaching-question:first-of-type{padding-top:4px}
+.question-heading{display:flex;align-items:baseline;gap:15px;margin:0 0 20px}
+.question-heading>span{display:flex;align-items:center;justify-content:center;align-self:flex-start;width:34px;height:34px;flex:0 0 34px;border-radius:5px;background:#e9eff2;color:#375670;font:22px/1 Georgia,serif}
+.question-heading h2{font-size:23px;margin:0;font-weight:650;letter-spacing:.01em}
+.teaching-question .prose{font-size:16px;line-height:1.95;overflow-wrap:anywhere}
+.teaching-question .prose p{margin:0 0 16px}.teaching-question .prose p:last-child{margin-bottom:0}
+.worked-example{background:#f6f8f7;border:1px solid #dae4e0;border-left:3px solid #608575;border-radius:3px 7px 7px 3px;padding:23px 25px;margin:25px 0}
+.example-label{font-size:16px;font-weight:650;color:#305c4b;margin-bottom:17px;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:baseline}
+.example-label span{font-weight:400;color:#73827a;font-size:12px}
+.check-understanding{margin:22px 0 0;padding:19px 21px;border:1px solid #e2e5e8;border-radius:6px}
+.check-understanding h3{font-size:16px}.check-understanding details{margin-bottom:0}
+.result-reading{margin-top:22px;max-width:100%}.result-table{width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed;border:1px solid #d6dfe3;border-radius:7px;overflow:hidden;font-size:14px;line-height:1.8}
+.result-table caption{text-align:left;font-size:13px;color:var(--muted);padding:0 0 10px;caption-side:top}
+.result-table th,.result-table td{padding:17px 15px;vertical-align:top;text-align:left;overflow-wrap:anywhere;border:0;border-right:1px solid #e0e6e8;border-bottom:1px solid #dce4e5}
+.result-table th:last-child,.result-table td:last-child{border-right:0}.result-table tbody tr:last-child>*{border-bottom:0}
+.result-table thead th{background:#edf2f2;font-weight:600;color:#2e5156}.result-table thead th:first-child{width:20%}
+.result-table tbody th{background:#f8faf9;font-weight:600;color:#2d4d50}.result-table tbody td{background:#fff}.result-table tbody tr:hover td{background:#fcfdfc}
+.result-order{display:block;margin-bottom:7px;font-size:11px;font-weight:500;letter-spacing:.08em;color:#718882}
+.method-procedure{list-style:none;counter-reset:method-steps;padding:0;margin:0 0 25px;display:grid;gap:14px}
+.method-procedure li{counter-increment:method-steps;position:relative;padding:3px 0 3px 42px;line-height:1.9;font-size:16px;overflow-wrap:anywhere}
+.method-procedure li:before{content:counter(method-steps);position:absolute;left:0;top:4px;width:27px;height:27px;border:1px solid #ccd8df;border-radius:50%;text-align:center;font:15px/26px Georgia,serif;color:#506e83}
+.code-intro{padding-top:20px;border-top:1px dashed var(--line);font-size:14px;color:var(--muted)}.code-intro h3{font-size:17px;color:var(--ink)}
+.conclusion-limits{padding-left:19px;border-left:3px solid #b1a080}
+.rsa-diagram{margin:26px 0}.rsa-diagram>p{font-size:14px;color:var(--muted);line-height:1.85}.rsa-panels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:18px 0}
+.rsa-figure{margin:0;border:1px solid #dbe3e5;border-radius:7px;background:#fff;padding:17px 8px 2px;min-width:0}
+.rsa-figure figcaption{padding:0 12px;display:grid;gap:5px}.rsa-figure figcaption b{font-size:15px;font-weight:650}.rsa-figure figcaption span{font-size:12px;color:var(--muted)}
+.rsa-figure svg{width:100%;height:auto;display:block;stroke:none;fill:none}.rsa-figure text{fill:#637785;font-size:15px;font-family:'Segoe UI','Microsoft YaHei',sans-serif;font-weight:400}
+.rsa-figure .rsa-grid{stroke:#e5ecef;stroke-width:1}.rsa-figure .rsa-axis{stroke:#aabac2;stroke-width:1.2}.rsa-figure text.rsa-axis-name{font-size:14px}.rsa-figure text.rsa-value{fill:#304e62;font-size:18px;font-weight:600}
+.rsa-takeaway{background:#f1f5f6;border-radius:6px;padding:16px 18px}.rsa-takeaway b{color:#355b61}
+@media(max-width:1100px){.rsa-panels{grid-template-columns:1fr}.rsa-figure{max-width:550px}.result-table th,.result-table td{padding:13px 10px;font-size:13px}}
+@media(max-width:700px){.question-index{grid-template-columns:1fr;margin-bottom:24px}.question-index a{padding:12px 15px;font-size:14px}.article .teaching-question{padding:25px 0 29px;scroll-margin-top:92px}.question-heading{gap:11px;margin-bottom:18px}.question-heading h2{font-size:20px}.question-heading>span{width:29px;height:29px;flex-basis:29px;font-size:19px}.teaching-question .prose{font-size:16px;line-height:1.95}.worked-example{padding:19px 18px;margin:21px 0}.example-label{display:block}.example-label span{display:block;margin-top:6px}.result-table{display:block;border:0;overflow:visible;table-layout:auto}.result-table caption{display:block;font-size:13px}.result-table thead{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.result-table tbody{display:block}.result-table tr{display:block;border:1px solid #d6dfe3;border-radius:7px;overflow:hidden;margin:0 0 17px}.result-table tbody th{display:block;width:auto;padding:15px 17px;font-size:16px;line-height:1.65;border:0;border-bottom:1px solid #dde5e6}.result-order{display:inline-block;margin:0 12px 0 0;font-size:11px}.result-table tbody td{display:block;padding:13px 17px;font-size:15px;line-height:1.85;border:0;border-bottom:1px solid #e5ebeb}.result-table tbody td:before{content:attr(data-label);display:block;font-size:12px;font-weight:600;color:#638078;margin-bottom:5px}.result-table tbody tr:last-child>*{border-bottom:1px solid #e5ebeb}.result-table tbody tr td:last-child{border:0}.method-procedure li{font-size:16px;padding-left:37px}.check-understanding{padding:17px}.conclusion-limits{padding-left:15px}.rsa-figure{padding-left:0;padding-right:0}.rsa-panels{gap:15px}.rsa-figure figcaption{padding:0 16px}.rsa-takeaway{padding:15px}}
+@media print{.question-index{display:none}.result-table{font-size:11px}.rsa-panels{grid-template-columns:1fr 1fr}.teaching-question{break-inside:auto}.question-heading{break-after:avoid}.result-table tr{break-inside:avoid}}

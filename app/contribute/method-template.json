@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "method": {
+    "id": "",
+    "cn": "",
+    "en": "",
+    "ab": "",
+    "aliases": [],
+    "fam": "",
+    "sub": "",
+    "lv": "L2",
+    "front": false,
+    "plain": "",
+    "origin": "",
+    "q1": "",
+    "q2": "",
+    "q3": "",
+    "q4": "",
+    "q6": "",
+    "example": "",
+    "readout": [
+      [
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        ""
+      ]
+    ],
+    "workflow": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "code": {
+      "r": ""
+    },
+    "soft": [
+      "R"
+    ],
+    "rp": [],
+    "pp": [],
+    "sp": [],
+    "related_methods": [],
+    "self_check": {
+      "question": "",
+      "answer": ""
+    }
+  },
+  "learning": {
+    "term_note": "",
+    "term_source": "",
+    "stages": [
+      {
+        "number": 1,
+        "name": "看懂问题和例子",
+        "outcome": "",
+        "targets": [
+          ""
+        ],
+        "resource_urls": []
+      },
+      {
+        "number": 2,
+        "name": "跟着做一次",
+        "outcome": "",
+        "targets": [
+          ""
+        ],
+        "resource_urls": []
+      },
+      {
+        "number": 3,
+        "name": "读懂关键结果",
+        "outcome": "",
+        "targets": [
+          ""
+        ],
+        "resource_urls": []
+      },
+      {
+        "number": 4,
+        "name": "说明结论与局限",
+        "outcome": "",
+        "targets": [
+          ""
+        ],
+        "resource_urls": []
+      }
+    ]
+  },
+  "references": [
+    {
+      "id": "",
+      "role": "origin",
+      "title": "",
+      "author": "",
+      "year": null,
+      "venue": "",
+      "doi": "",
+      "url": "",
+      "lang": "en",
+      "use": "",
+      "locator": "",
+      "checked_at": "",
+      "access": "",
+      "availability": ""
+    },
+    {
+      "id": "",
+      "role": "tutorial",
+      "title": "",
+      "author": "",
+      "year": null,
+      "venue": "",
+      "doi": "",
+      "url": "",
+      "lang": "en",
+      "use": "",
+      "locator": "",
+      "checked_at": "",
+      "access": "",
+      "availability": ""
+    }
+  ],
+  "existing_reference_ids": [],
+  "resources": [
+    {
+      "id": "",
+      "title": "",
+      "url": "",
+      "lang": "en",
+      "medium": "text",
+      "provider": "",
+      "scope": "",
+      "source": "",
+      "access": "",
+      "coverage": "direct",
+      "locator": "",
+      "checked_at": "",
+      "availability": ""
+    }
+  ],
+  "existing_resources": [],
+  "placement": {
+    "cluster_ids": [],
+    "history_node_ids": [],
+    "history_note": ""
+  },
+  "cases": [],
+  "quality": {
+    "terminology_check": "",
+    "calculation_check": "",
+    "code_check": "",
+    "evidence_check": "",
+    "case_gap": "",
+    "resource_gaps": {
+      "zh_text": "",
+      "en_text": "",
+      "zh_video": "",
+      "en_video": ""
+    }
+  }
+}

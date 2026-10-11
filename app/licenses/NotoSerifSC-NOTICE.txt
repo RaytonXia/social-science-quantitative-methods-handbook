@@ -1,0 +1,5 @@
+Atlas Editorial Serif is a subset of Noto Serif SC, renamed for this application.
+Source: https://github.com/google/fonts/tree/main/ofl/notoserifsc
+License: SIL Open Font License 1.1 (see NotoSerifSC-OFL.txt).
+Modification: subset to application text plus Latin characters; WOFF2 compression; internal family name changed.
+The font is bundled locally. No font server is contacted by the application.

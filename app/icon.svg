@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <title>社会科学量化方法学自学图谱</title>
+  <defs>
+    <linearGradient id="ink" x1="96" y1="72" x2="457" y2="433" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#294B63"/>
+      <stop offset="1" stop-color="#203D53"/>
+    </linearGradient>
+    <linearGradient id="slate" x1="284" y1="208" x2="431" y2="458" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#89A0B6"/>
+      <stop offset=".55" stop-color="#8DA3B6"/>
+      <stop offset="1" stop-color="#7892A8"/>
+    </linearGradient>
+    <mask id="channel" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
+      <path fill="#fff" d="M0 0h512v512H0z"/>
+      <path fill="#000" d="M196 478C239 460 264 437 291 400C317 363 340 333 370 315C399 296 428 292 452 305L463 320C439 307 411 312 382 329C353 346 330 374 305 408C275 449 246 472 211 481Z"/>
+    </mask>
+  </defs>
+  <path fill="url(#ink)" d="M112 427.5A224 224 0 1 1 470 322.2C450 305 436 263 418 213C393 151 377 120 352 124C330 128 317 177 300 232C284 279 267 326 240 365C211 403 163 418 112 427.5Z"/>
+  <path fill="url(#slate)" mask="url(#channel)" d="M151 453.9C224 434 272 405 302 336C321 293 330 244 344 218C354 198 365 198 376 213C392 236 406 279 426 310C441 332 452 340 463.9 341.9A224 224 0 0 1 151 453.9Z"/>
+</svg>

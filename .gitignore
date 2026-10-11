@@ -1,0 +1,30 @@
+# Local credentials and reader data must never enter this repository.
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.pfx
+*.p12
+*.keystore
+*.jks
+hosts.yml
+WebView/
+User Data/
+isolated-webview*/
+Diagnostics/
+backups/
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+node_modules/
+# Complete binary distributions and third-party PDFs live in Releases.
+dist/
+/app/books/*.pdf
+/runtime/*.exe
+/*.exe
+/native/*.exe
+/native/*.pdb

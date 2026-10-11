@@ -1,0 +1,5 @@
+﻿先安装 R；可选安装 RStudio。打开 analysis.R，在你自己的项目文件夹从第一行开始运行。
+不需要安装额外分析包。输出在 tutorial_output 文件夹。
+manuscript.qmd 是可选 Quarto 写作模板，需要 Quarto 与 R 的 knitr、rmarkdown 环境。
+本机未安装 R：脚本未在本机 R 执行；示例的普通最小二乘数值已由独立计算核对。
+课程在应用“从零开始”中，共 12 课，草稿随学习备份导出。
