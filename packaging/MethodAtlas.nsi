@@ -7,12 +7,12 @@ Unicode true
 !include "LogicLib.nsh"
 
 !define APPNAME "社会科学量化方法自学手册"
-!define RELEASE "社会科学量化方法自学手册_v1.0.1"
+!define RELEASE "社会科学量化方法自学手册_v1.0.2"
 !define EXENAME "${RELEASE}.exe"
 !define APPID "MethodAtlas.Quantitative.1"
 !define PAYLOAD "..\dist\${RELEASE}"
 
-Name "${APPNAME} v1.0.1"
+Name "${APPNAME} v1.0.2"
 OutFile "..\dist\${RELEASE}_Setup.exe"
 InstallDir "$LOCALAPPDATA\Programs\MethodAtlas"
 InstallDirRegKey HKCU "Software\MethodAtlas\Installer" "InstallDir"
@@ -23,11 +23,11 @@ SetDatablockOptimize on
 CRCCheck on
 ManifestDPIAware true
 BrandingText "METHODS HANDBOOK · 从问题出发，回到证据。"
-VIProductVersion "1.0.1.0"
+VIProductVersion "1.0.2.0"
 VIAddVersionKey /LANG=2052 "ProductName" "${APPNAME}"
-VIAddVersionKey /LANG=2052 "FileDescription" "${APPNAME} v1.0.1 安装程序"
-VIAddVersionKey /LANG=2052 "FileVersion" "1.0.1.0"
-VIAddVersionKey /LANG=2052 "ProductVersion" "1.0.1"
+VIAddVersionKey /LANG=2052 "FileDescription" "${APPNAME} v1.0.2 安装程序"
+VIAddVersionKey /LANG=2052 "FileVersion" "1.0.2.0"
+VIAddVersionKey /LANG=2052 "ProductVersion" "1.0.2"
 VIAddVersionKey /LANG=2052 "LegalCopyright" "各内置资料的版权归原作者所有"
 !define MUI_ICON "${PAYLOAD}\atlas.ico"
 !define MUI_UNICON "${PAYLOAD}\atlas.ico"
@@ -131,13 +131,16 @@ Section "应用与内置原文（必需）" Main
   ${EndIf}
   SetOverwrite on
   !include "payload-install.nsh"
+  ; Remove only the two superseded launcher files from the preceding release.
+  Delete "$INSTDIR\社会科学量化方法自学手册_v1.0.1.exe"
+  Delete "$INSTDIR\社会科学量化方法自学手册_v1.0.1.exe.config"
   SetOutPath "$INSTDIR"
   WriteINIStr "$INSTDIR\installation.ini" "Install" "AppId" "${APPID}"
   WriteINIStr "$INSTDIR\installation.ini" "Install" "QAMode" "$QAMode"
   WriteUninstaller "$INSTDIR\Uninstall.exe"
   WriteRegStr HKCU "$InstallKey" "InstallDir" "$INSTDIR"
   WriteRegStr HKCU "$UninstallKey" "DisplayName" "${APPNAME}"
-  WriteRegStr HKCU "$UninstallKey" "DisplayVersion" "1.0.1"
+  WriteRegStr HKCU "$UninstallKey" "DisplayVersion" "1.0.2"
   WriteRegStr HKCU "$UninstallKey" "InstallLocation" "$INSTDIR"
   WriteRegStr HKCU "$UninstallKey" "UninstallString" '$\"$INSTDIR\Uninstall.exe$\"'
   WriteRegStr HKCU "$UninstallKey" "QuietUninstallString" '$\"$INSTDIR\Uninstall.exe$\" /S'

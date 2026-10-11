@@ -5,9 +5,9 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent
-PAYLOAD = REPO / 'dist/社会科学量化方法自学手册_v1.0.1'
+PAYLOAD = REPO / 'dist/社会科学量化方法自学手册_v1.0.2'
 if not PAYLOAD.is_dir():
-    raise SystemExit('Expected a complete, prepared v1.0.1 payload in dist/.')
+    raise SystemExit('Expected a complete, prepared v1.0.2 payload in dist/.')
 rights = json.loads((PAYLOAD/'app/licenses/readings.json').read_text('utf-8'))
 expected = {'app/'+r['file'] for r in rights if r['bundled']}
 actual = {p.relative_to(PAYLOAD).as_posix() for p in PAYLOAD.rglob('*') if p.is_file() and p.suffix.lower()=='.pdf'}

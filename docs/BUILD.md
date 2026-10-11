@@ -14,17 +14,16 @@ python -m http.server 8772 --bind 127.0.0.1 --directory app
 ## Windows 启动器
 
 ```powershell
-& .
-ativeuild.ps1
+& .\native\build.ps1
 ```
 
 脚本用 Windows 自带的 .NET Framework C# 编译器生成根目录的 EXE。保留 Atlas.Shell.dll 和 WebView2 DLL。启动器与外壳必须有不同的程序集名称，不能将新 EXE 覆盖到 Atlas.Shell.dll。Timer 必须在外壳完成 WinForms 初始化后启动。修改标题时保留 MethodAtlas 用户数据目录、应用 ID、网页来源及学习记录存储键。
 
 既有 Atlas.Shell.dll 的完整源工程未保留在仓库；这里构建的是入口与 AI 连接组件，并非从源码重建全部原生外壳。
 
-## 复建 v1.0.1 Setup
+## 复建 v1.0.2 Setup
 
-1. 下载 v1.0.1 Release ZIP，完整解压为 `dist/社会科学量化方法自学手册_v1.0.1/`。它提供 63 份原文、28 份对应 R 包源码、许可、微软 WebView2 引导程序和应用文件。
+1. 下载 v1.0.2 Release ZIP，完整解压为 `dist/社会科学量化方法自学手册_v1.0.2/`。它提供 63 份原文、28 份对应 R 包源码、许可、微软 WebView2 引导程序和应用文件。
 2. 将修改后的应用文件和重新编译的 EXE 复制到该目录。原文变化须同步更新许可清单；不要重新加入仅允许链接的 10 份 PDF。
 3. 运行 `python packaging/make_manifest.py`，重新生成明确的安装、卸载清单和 SHA256 基线。脚本会核对读物、源包及必要许可，阻止未经登记的 PDF 混入。
 4. 使用 Unicode NSIS，在 packaging 目录执行 `makensis /INPUTCHARSET UTF8 MethodAtlas.nsi`。
