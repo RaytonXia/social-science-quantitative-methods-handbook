@@ -28,12 +28,12 @@ Windows 10 / 11 x64 · 中文讲解与英文术语对照 · R 示例为主 · �
 
 ## 下载使用
 
-到 **[最新版下载页](https://github.com/RaytonXia/social-science-quantitative-methods-handbook/releases/latest)**，展开 **Assets**，选下面一种：
+直接点击下表中的文件名下载，选一种即可。也可以到[最新版下载页](https://github.com/RaytonXia/social-science-quantitative-methods-handbook/releases/latest)的 **Assets** 中下载。
 
 | 你想怎么用 | 下载哪个文件 | 下载后怎么打开 |
 | --- | --- | --- |
-| 安装到电脑上，**推荐初次使用** | `QuantMethodsHandbook_v1.0.2_Setup.exe` | 双击安装，完成后从开始菜单打开手册。 |
-| 不安装，解压就用 | `QuantMethodsHandbook_v1.0.2.zip` | **完整解压**，进入解压后的文件夹，双击 `社会科学量化方法自学手册_v1.0.2.exe`。 |
+| 安装到电脑上，**推荐初次使用** | [QuantMethodsHandbook_v1.0.2_Setup.exe](https://github.com/RaytonXia/social-science-quantitative-methods-handbook/releases/download/v1.0.2/QuantMethodsHandbook_v1.0.2_Setup.exe) | 双击安装，完成后从开始菜单打开手册。 |
+| 不安装，解压就用 | [QuantMethodsHandbook_v1.0.2.zip](https://github.com/RaytonXia/social-science-quantitative-methods-handbook/releases/download/v1.0.2/QuantMethodsHandbook_v1.0.2.zip) | **完整解压**，进入解压后的文件夹，双击 `社会科学量化方法自学手册_v1.0.2.exe`。 |
 
 **不要只拿走 EXE，也不要在压缩包里直接运行。** 旁边的 `app` 文件夹、DLL 和配置文件都要保留。GitHub 的 **Source code** 是维护源码，初次使用不用下载它。
 
