@@ -1,0 +1,2 @@
+0fe3b8ee52eba80b407a8ae77b92fb3f152a1a90a721ed11e19c456ede2c2d41  QuantMethodsHandbook_v1.0.1_Setup.exe
+2f4e63bd00245315ee45fba2c84840e43d0970a30935cc364d499d1555d21d23  QuantMethodsHandbook_v1.0.1.zip

@@ -13,10 +13,10 @@ using System.Windows.Forms;
 using Microsoft.Web.WebView2.Core;
 using Microsoft.Web.WebView2.WinForms;
 
-[assembly: AssemblyTitle("社会科学量化方法学自学图谱")]
-[assembly: AssemblyProduct("社会科学量化方法学自学图谱")]
-[assembly: AssemblyVersion("1.4.2.0")]
-[assembly: AssemblyFileVersion("1.4.2.0")]
+[assembly: AssemblyTitle("社会科学量化方法自学手册")]
+[assembly: AssemblyProduct("社会科学量化方法自学手册")]
+[assembly: AssemblyVersion("1.4.3.0")]
+[assembly: AssemblyFileVersion("1.4.3.0")]
 
 // Keeps the established WebView shell, profile, reader bridge and origin unchanged.
 // This entry point only adds an opt-in, fixed-provider HTTPS transport.
@@ -55,13 +55,15 @@ internal static class AssistantHost {
                 : "程序初始化未完成。请保留下面的错误信息，以便定位原因。";
             MessageBox.Show(explanation+"\n\n"+ex.GetType().Name+": "+ex.Message+
                 (logPath.Length>0?"\n\n诊断记录："+logPath:"")+"\n\n学习记录仍保留在原来的本机位置。",
-                "社会科学量化方法学自学图谱", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                "社会科学量化方法自学手册", MessageBoxButtons.OK, MessageBoxIcon.Information);
         } finally {
             Application.Idle -= startBridge;
             timer.Dispose();foreach(var bridge in Bridges) bridge.Dispose();
         }
     }
     private static void AttachChildren(Control c) {
+        var form = c as Form;
+        if(form != null && form.Text.StartsWith("社会科学")) form.Text="社会科学量化方法自学手册";
         var view = c as WebView2;
         if(view != null && !view.IsDisposed && view.CoreWebView2 != null && Attached.Add(view.CoreWebView2))
             Bridges.Add(new AssistantBridge(view.CoreWebView2));

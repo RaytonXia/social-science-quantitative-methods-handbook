@@ -6,13 +6,13 @@ Unicode true
 !include "FileFunc.nsh"
 !include "LogicLib.nsh"
 
-!define APPNAME "社会科学量化方法自学图谱"
-!define RELEASE "社会科学量化方法自学图谱_v1.0"
+!define APPNAME "社会科学量化方法自学手册"
+!define RELEASE "社会科学量化方法自学手册_v1.0.1"
 !define EXENAME "${RELEASE}.exe"
 !define APPID "MethodAtlas.Quantitative.1"
 !define PAYLOAD "..\dist\${RELEASE}"
 
-Name "${APPNAME} v1.0"
+Name "${APPNAME} v1.0.1"
 OutFile "..\dist\${RELEASE}_Setup.exe"
 InstallDir "$LOCALAPPDATA\Programs\MethodAtlas"
 InstallDirRegKey HKCU "Software\MethodAtlas\Installer" "InstallDir"
@@ -22,25 +22,25 @@ SetCompressorDictSize 32
 SetDatablockOptimize on
 CRCCheck on
 ManifestDPIAware true
-BrandingText "METHOD ATLAS · 从问题出发，回到证据。"
-VIProductVersion "1.0.0.0"
+BrandingText "METHODS HANDBOOK · 从问题出发，回到证据。"
+VIProductVersion "1.0.1.0"
 VIAddVersionKey /LANG=2052 "ProductName" "${APPNAME}"
-VIAddVersionKey /LANG=2052 "FileDescription" "${APPNAME} v1.0 安装程序"
-VIAddVersionKey /LANG=2052 "FileVersion" "1.0.0.0"
-VIAddVersionKey /LANG=2052 "ProductVersion" "1.0"
+VIAddVersionKey /LANG=2052 "FileDescription" "${APPNAME} v1.0.1 安装程序"
+VIAddVersionKey /LANG=2052 "FileVersion" "1.0.1.0"
+VIAddVersionKey /LANG=2052 "ProductVersion" "1.0.1"
 VIAddVersionKey /LANG=2052 "LegalCopyright" "各内置资料的版权归原作者所有"
 !define MUI_ICON "${PAYLOAD}\atlas.ico"
 !define MUI_UNICON "${PAYLOAD}\atlas.ico"
 !define MUI_ABORTWARNING
-!define MUI_COMPONENTSPAGE_TEXT_TOP "安装完整应用与 73 份离线读物。学习记录保存在独立的本机目录中。"
+!define MUI_COMPONENTSPAGE_TEXT_TOP "安装完整应用与 63 份离线读物。学习记录保存在独立的本机目录中。"
 !insertmacro MUI_PAGE_COMPONENTS
 !define MUI_DIRECTORYPAGE_TEXT_TOP "选择程序位置。请关闭正在运行的本软件后再安装；原来的学习记录会继续保留。"
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 !define MUI_FINISHPAGE_TITLE "安装完成"
-!define MUI_FINISHPAGE_TEXT "现在可以从开始菜单打开图谱。方法词典、学习引导和内置读物均可离线使用。"
+!define MUI_FINISHPAGE_TEXT "现在可以从开始菜单打开手册。方法词典、学习引导和内置读物均可离线使用。"
 !define MUI_FINISHPAGE_RUN "$INSTDIR\${EXENAME}"
-!define MUI_FINISHPAGE_RUN_TEXT "打开图谱"
+!define MUI_FINISHPAGE_RUN_TEXT "打开手册"
 !insertmacro MUI_PAGE_FINISH
 !define MUI_UNCONFIRMPAGE_TEXT_TOP "卸载程序文件，保留学习笔记、收藏、阅读位置和课程草稿。"
 !insertmacro MUI_UNPAGE_CONFIRM
@@ -110,7 +110,7 @@ Function ReadRuntime
   ${EndIf}
 FunctionEnd
 
-Section "应用与完整离线资料（必需）" Main
+Section "应用与内置原文（必需）" Main
   SectionIn RO
   Call ReadRuntime
   ${If} $RuntimeVersion == ""
@@ -137,7 +137,7 @@ Section "应用与完整离线资料（必需）" Main
   WriteUninstaller "$INSTDIR\Uninstall.exe"
   WriteRegStr HKCU "$InstallKey" "InstallDir" "$INSTDIR"
   WriteRegStr HKCU "$UninstallKey" "DisplayName" "${APPNAME}"
-  WriteRegStr HKCU "$UninstallKey" "DisplayVersion" "1.0"
+  WriteRegStr HKCU "$UninstallKey" "DisplayVersion" "1.0.1"
   WriteRegStr HKCU "$UninstallKey" "InstallLocation" "$INSTDIR"
   WriteRegStr HKCU "$UninstallKey" "UninstallString" '$\"$INSTDIR\Uninstall.exe$\"'
   WriteRegStr HKCU "$UninstallKey" "QuietUninstallString" '$\"$INSTDIR\Uninstall.exe$\" /S'

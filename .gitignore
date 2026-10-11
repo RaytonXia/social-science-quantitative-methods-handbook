@@ -28,3 +28,5 @@ dist/
 /*.exe
 /native/*.exe
 /native/*.pdb
+
+/app/licenses/sources/*.tar.gz

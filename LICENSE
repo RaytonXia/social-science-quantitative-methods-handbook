@@ -1,0 +1,15 @@
+社会科学量化方法自学手册 — 代码非商业使用许可 1.0
+LicenseRef-Quantitative-Methods-Handbook-NonCommercial-1.0
+Copyright (c) 2026 RaytonXia
+
+1. 范围。本许可适用于本项目由 RaytonXia 提供且未另行标注许可的应用程序代码、构建脚本和项目自有编译产物。原创教学内容适用 LICENSE-CONTENT.md；第三方作品不适用本许可。
+2. 授权。在遵守下列条件的前提下，允许任何人免费以非商业目的使用、复制、研究、修改和再分发本许可覆盖的作品及修改版本。
+3. 非商业限制。未经 RaytonXia 事先书面许可，不得将本许可覆盖的作品或其修改版本用于主要为获得商业利益或金钱报酬的活动，包括销售、收费服务、付费课程、商业产品或服务的集成。是否收费并非唯一判断标准。商业授权请通过项目仓库联系作者。
+4. 署名与分发。分发时须保留本许可、版权及来源说明，并注明修改。修改版本中本许可覆盖的部分仍受本许可约束，不得给予接收者未经授权的商业使用权。不得暗示原作者认可修改版本。
+5. 第三方例外。内置文献、R 包手册及其源码、词典、字体、PDF.js、WebView2 等分别适用各自许可。不得用本许可限制第三方许可已授予的权利。本项目是对独立作品的汇集，不改变其权属或许可。
+6. 保留权利。本许可不授予商标、第三方专利或其他未明确授予的权利，不限制法律规定的合理使用等法定权利。违反本许可时，相关授权终止；另行书面授权不受影响。
+7. 无担保。作品按现状提供，不保证适合特定用途或不存在错误。在法律允许范围内，作者不承担因使用作品产生的责任。
+
+This is a source-available, noncommercial license, not an OSI-approved open-source license.
+Noncommercial use, copying, modification and redistribution of project-owned code are permitted with attribution and retention of this license. Commercial use requires RaytonXia's prior written permission. Third-party works retain their own licenses and are expressly excluded. The Chinese terms above govern.
+Project: https://github.com/RaytonXia/social-science-quantitative-methods-handbook

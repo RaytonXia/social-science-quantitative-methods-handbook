@@ -401,3 +401,6 @@ dialog h2{font-family:var(--serif);font-size:28px;color:var(--ink)}.dialog-close
 .contribute-prompt .actions{flex-wrap:wrap;align-items:center}
 #contribute-copy-status{font-size:13px;color:var(--muted,#6b766c)}
 @media(max-width:650px){.dictionary-tools{gap:12px;font-size:12px}.results-head{gap:12px;flex-wrap:wrap}.contribute-downloads{gap:16px}.contribute-flow,.contribute-questions{grid-template-columns:1fr;gap:25px}.contribute-page h1{font-size:30px}.contribute-section{margin:32px 0}.contribute-section>.section-head{align-items:flex-start}}
+
+/* Reading access and project information */
+.book-rights{margin-top:14px;font-size:12px;line-height:1.7}.book-rights summary{cursor:pointer;color:var(--muted,#596875)}.book-rights p{font-size:12px;margin:8px 0}.book-rights a{overflow-wrap:anywhere}.about-intro,.about-feedback{padding:28px 0;border-bottom:1px solid var(--line,#d8d7d0);margin-bottom:28px}.about-intro h2{font-size:clamp(22px,3vw,32px);line-height:1.5}.official-reading{max-width:850px}.official-reading .actions{flex-wrap:wrap}.side-note>a{display:inline-block;margin-top:8px}footer a{color:inherit}.book-info{min-width:0}

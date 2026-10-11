@@ -1,6 +1,6 @@
 'use strict';
 window.MethodContribute = (() => {
-  const prompt = `请为《社会科学量化方法学自学图谱》的方法词典添加我指定的方法。
+  const prompt = `请为《社会科学量化方法自学手册》的方法词典添加我指定的方法。
 
 先读取当前 app/contribute/AGENTS.md 和 README.md，使用 method_tool.py catalog 查看现有分类与条目，避免重复收录。用 template 命令生成 JSON 草稿，不从旧版复制整库。
 

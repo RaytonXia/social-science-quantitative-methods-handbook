@@ -1,0 +1,18 @@
+name: 软件问题
+description: 报告无法启动、阅读或记录问题
+title: "[问题] "
+body:
+  - type: input
+    id: version
+    attributes:
+      label: 软件版本与操作系统
+      placeholder: 例如 v1.0.1 / Windows 11 / 安装版
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 操作步骤、期望结果与实际现象
+      description: 截图和日志请先去掉账号、密钥、私人笔记和研究数据。
+    validations:
+      required: true

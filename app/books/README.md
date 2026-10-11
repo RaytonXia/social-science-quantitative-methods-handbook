@@ -1,3 +1,3 @@
-# 离线读物
+# 内置读物
 
-73 份 PDF 随同版本的完整 Release ZIP 和安装包提供，不重复提交到 Git。预览阅读器前，从 Release ZIP 中复制本目录下的 PDF。书目、原始来源与文件校验值保存在 `../books-data.js`，公开分发前的许可复核记录见 `../../docs/third-party-readings.csv`。
+同版本完整发行包包含 63 份原始 PDF。此目录不在 Git 中保存 PDF。以 app/licenses/readings.json 中 bundled=true 的文件和 SHA256 为准；不得从旧发行包整体复制未经核查的资料。官方获取条目保留在应用书架中。

@@ -1,0 +1,6 @@
+Dive into Deep Learning (Chinese, PyTorch PDF). Authors: Aston Zhang, Zachary C. Lipton, Mu Li, Alexander J. Smola and contributors.
+Original PDF retained without modification.
+Text: CC BY-SA 4.0; code in the book: MIT-0.
+Official book configuration: https://github.com/d2l-ai/d2l-zh/blob/master/config.ini
+PDF: https://zh-v2.d2l.ai/d2l-zh-pytorch.pdf
+These licenses are independent of the handbook noncommercial license.

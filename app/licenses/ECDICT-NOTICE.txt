@@ -1,0 +1,6 @@
+ECDICT by skywind3000 / Linwei and contributors.
+Source: https://github.com/skywind3000/ECDICT
+MIT license: ECDICT-LICENSE.txt
+Verified 2026-10-11: all 745179 bundled word entries match phonetic and translation fields of upstream ecdict.csv (line breaks normalized).
+CSV SHA256: 1a6947e04785db63613a92e14903cdae7954f7e84860b10e68e5c7cbb3f9c3cf
+The dictionary is third-party MIT-licensed data, not subject to the handbook noncommercial license.

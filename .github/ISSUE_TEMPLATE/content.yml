@@ -1,0 +1,23 @@
+name: 内容纠错与教学建议
+description: 哪句话难懂、哪个指标不清楚，或有什么更好的案例？
+title: "[教学] "
+body:
+  - type: input
+    id: location
+    attributes:
+      label: 方法编号或页面
+      placeholder: 例如 D02、RSA 的结果解读、学习引导第 3 课
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 问题与建议
+      description: 写明具体位置、你的疑问和希望补充的讲解。
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: 参考来源（如有）
+      description: 可附 DOI、官方链接或教材章节。不要上传无权分享的原文、私人数据或 API 密钥。
