@@ -12,6 +12,7 @@ import shutil
 import sys
 import tempfile
 from urllib.parse import urlsplit
+from teaching_schema import validate_guide, guide_template
 
 FILES = {'atlas-data.js': 'ATLAS', 'learning-data.js': 'LEARNING',
          'downloads-data.js': 'DOWNLOADS', 'books-data.js': 'BOOKS', 'history-data.js':'ATLAS_HISTORY'}
@@ -74,7 +75,7 @@ def template(family='', sub='', mid=''):
             'example': '', 'readout': [[''] * (3 if family == 'M' else 4) for _ in range(3)],
             'workflow': ['', '', '', ''], 'code': {'r': ''}, 'soft': ['R'],
             'rp': [], 'pp': [], 'sp': [], 'related_methods': [],
-            'self_check': {'question': '', 'answer': ''}},
+            'self_check': {'question': '', 'answer': ''}, 'guide':guide_template()},
         'learning': {'term_note': '', 'term_source': '', 'stages': [
             {'number': i+1, 'name': n, 'outcome': '', 'targets': [''], 'resource_urls': []}
             for i, n in enumerate(STAGE_NAMES)]},
@@ -154,7 +155,12 @@ def validate(bundle, data):
     base = template()
     b = obj(bundle, '草稿', base)
     if b.get('schema_version') != 1: fail('schema_version 必须为 1。')
-    m = obj(b.get('method'), 'method', base['method'])
+    method_shape=dict(base['method'])
+    if isinstance(b.get('method'),dict) and 'guide' not in b['method']:
+        method_shape.pop('guide')
+        warnings.append('旧稿未提供guide，将使用兼容指标表；建议按新模板补充递进例子与图示。')
+    m = obj(b.get('method'), 'method', method_shape)
+    if 'guide' in m:errors.extend(validate_guide(m['guide'],mids))
     for k in ('id', 'cn', 'en', 'fam', 'sub', 'lv', 'plain', 'origin', 'q1', 'q2', 'q3', 'q4', 'q6', 'example'):
         text(m.get(k), 'method.' + k)
     mid = m.get('id', '') if isinstance(m.get('id'), str) else ''
@@ -290,6 +296,11 @@ def prepare(bundle, original):
     rm = {r['id']: r for r in a['resources']}
     for r in b['existing_resources']: rm[r['id']].setdefault('coverage', {})[mid] = r['coverage']
     m['resources'] = [r['id'] for r in b['resources']] + [r['id'] for r in b['existing_resources']]
+    if m.get('guide'):
+        g=m['guide'];m['technical_explanation']=m['q2']
+        m['q2']='\n\n'.join(g['steps'])
+        m['readout']=[[v['name'],v['meaning'],v['value'],v['caution']] for v in g['metrics']]
+        if m['fam']=='M':m['readout']=[[v['name'],v['meaning']+' '+v['value'],v['caution']] for v in g['metrics']]
     m['fam_name'] = family['name']; m['explain'] = m['q2']
     m['q5'] = '\n\n'.join(f'{i+1}．{s}' for i, s in enumerate(m['workflow']))
     m['example_label'] = '教学示例'
@@ -356,6 +367,7 @@ def audit(data, app=None):
         if m['id'] not in l: errors.append(f'{m["id"]} 缺少学习资料。')
         refs_exist(m.get('resources',[]), resources, m['id'])
         refs_exist(m.get('related_methods',[]), ids, m['id'])
+        if m.get('guide'):errors.extend(m['id']+': '+e for e in validate_guide(m['guide'],ids))
     for name, rows in [('问题群',c['clusters']),('历史节点',c['graph']['nodes']),('案例',c['cases'])]:
         for row in rows:
             refs_exist(row.get('methods',[]), ids, name + ' ' + row['id'])

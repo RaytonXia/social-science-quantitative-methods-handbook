@@ -57,6 +57,53 @@
     "self_check": {
       "question": "",
       "answer": ""
+    },
+    "guide": {
+      "question": "",
+      "data": "",
+      "steps": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "metrics": [
+        {
+          "name": "",
+          "value": "",
+          "meaning": "",
+          "change": "",
+          "caution": ""
+        },
+        {
+          "name": "",
+          "value": "",
+          "meaning": "",
+          "change": "",
+          "caution": ""
+        },
+        {
+          "name": "",
+          "value": "",
+          "meaning": "",
+          "change": "",
+          "caution": ""
+        }
+      ],
+      "conclusion": "",
+      "prerequisites": [],
+      "sources": [],
+      "figure": {
+        "kind": "flow",
+        "title": "",
+        "labels": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "caption": ""
+      }
     }
   },
   "learning": {

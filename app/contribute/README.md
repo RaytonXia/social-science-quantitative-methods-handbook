@@ -62,6 +62,21 @@ python method_tool.py check-app
 
 所有正文使用纯文本；段落用 `\n\n` 分开，可用 `**重点**`。不要写 HTML、脚本或内联事件。需要相互链接时，在相关方法列表填编号；不要自行拼不存在的方法链接。
 
+## 递进讲解与图示
+
+新模板的 `method.guide` 用于与现有方法页相同的逐步教学和指标卡。旧格式仍能导入，但建议完整填写此部分。不要复制某个方法后只替换名称。
+
+- `question`：读者能理解的具体问题。`data`：说明一行是谁、变量、单位、比较对象和教学数字从哪来。
+- `steps`：至少三步。先解释例子，再引入名词与公式；每个符号出现时说明含义。涉及求和就逐项展开，涉及百分比就写清分母。
+- `metrics`：至少三项。每项包括 `name`（中文与专业英文）、`value`（示例输出或明确诊断）、`meaning`（这个数回答什么）、`change`（增减、符号及比较条件）、`caution`（区间、假设和不能推出的结论）。设计与诊断条目不强行编造统计量。
+- `conclusion`：按本页例子写一段有单位和边界的结论。`self_check` 仍填在 method 下：问题必须具体，答案能说明误解在哪里，不能统一套“你还需要哪些信息”。
+- `prerequisites`：已有方法编号，建议一至两个。只链接真正有帮助的基础，避免循环。
+- `sources`：可选的讲解依据，每项为 `title`、`url`、`locator`。写清实际查阅的章节或摘要；没有完整读过，不声称核实了完整算法。
+
+`figure` 必须给 `title`、`caption`。`kind` 可用：`flow`（步骤，labels）、`bars`（柱图，labels/values/unit）、`lines` 或 `steps`（折线或阶梯，labels/series/unit，series 每项含 name/values）、`intervals`（区间，labels/points/bounds/unit/null）、`spatial`（四种局部空间类型，4个labels）。数字必须有限、数量相符；区间上下界正确。图不能把并列类型画成因果或时间链，连线也不能暗示未检验的连续形状。
+
+结构化讲解接入时，原 q2 保存在折叠的专业说明中，guide.steps 作为正文，指标卡来自 guide.metrics。入库工具不执行 R 或检验教学结论。最终仍需核算数字、逐页预览并检查手机排版。
+
 ## 自动接入哪些位置
 
 入库自动更新 `atlas-data.js`、`learning-data.js`、`downloads-data.js`，以及有相关既存读物时的 `books-data.js`，并刷新 `index.html` 的资源指纹。新方法出现在搜索、中文／英文／别名检索、层级与软件标签、分类树、问题群、所选历史节点、分步学习和文献下载清单中。条目标题与简介只填写一次，工具同步两处数据，避免被旧学习资料覆盖。

@@ -5,9 +5,9 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent
-PAYLOAD = REPO / 'dist/社会科学量化方法自学手册_v1.0.2'
+PAYLOAD = REPO / 'dist/社会科学量化方法自学手册_v1.1.1'
 if not PAYLOAD.is_dir():
-    raise SystemExit('Expected a complete, prepared v1.0.2 payload in dist/.')
+    raise SystemExit('Expected a complete, prepared v1.1.1 payload in dist/.')
 rights = json.loads((PAYLOAD/'app/licenses/readings.json').read_text('utf-8'))
 expected = {'app/'+r['file'] for r in rights if r['bundled']}
 actual = {p.relative_to(PAYLOAD).as_posix() for p in PAYLOAD.rglob('*') if p.is_file() and p.suffix.lower()=='.pdf'}
@@ -36,6 +36,6 @@ for p in files:
 for d in sorted((p for p in PAYLOAD.rglob('*') if p.is_dir()),key=lambda p:len(p.parts),reverse=True):
     uninstall.append('RMDir "$INSTDIR\\'+str(d.relative_to(PAYLOAD))+'"')
 for name,lines in [('payload-install.nsh',install),('payload-uninstall.nsh',uninstall)]:
-    (HERE/name).write_text('\n'.join(lines)+'\n','utf-8')
-(HERE/'payload-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n','utf-8')
+    (HERE/name).write_bytes(('\r\n'.join(lines)+'\r\n').encode('utf-8'))
+(HERE/'payload-manifest.json').write_bytes((json.dumps(manifest,ensure_ascii=False,indent=2)+'\n').encode('utf-8'))
 print(json.dumps({'files':len(files),'pdfs':len(expected),'source_archives':len(sources),'bytes':sum(p.stat().st_size for p in files)}))

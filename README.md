@@ -24,7 +24,7 @@ Windows 10 / 11 x64 · 中文讲解与英文术语对照 · R 示例为主 · �
 
 这本手册把方法讲解、结果示例、原始文献和学习练习放在一起。你可以按课程顺序学，也可以带着一个具体问题进来查。遇到不懂的术语，点开解释；想知道方法之间的关系，展开分类树；读到需要核对的地方，打开配套原文。
 
-目前包含 **176 个方法与基础条目、12 课入门引导、89 个方法史事件和 63 份离线原文**。讲解以中文为主，配专业英文名称；代码示例以 R 为主，兼顾其他软件。
+目前包含 **176 个方法与基础条目、12 课入门引导、89 个方法史事件和 63 份离线原文**。讲解以中文为主，配专业英文名称；代码示例以 R 为主，兼顾其他软件。176 个条目配有 717 项指标与诊断说明、逐步例子和独立自测题，帮助读者看懂数字的含义、变化和结论边界。
 
 ## 下载使用
 
@@ -32,14 +32,14 @@ Windows 10 / 11 x64 · 中文讲解与英文术语对照 · R 示例为主 · �
 
 | 你想怎么用 | 下载哪个文件 | 下载后怎么打开 |
 | --- | --- | --- |
-| 安装到电脑上，**推荐初次使用** | [QuantMethodsHandbook_v1.0.2_Setup.exe](https://github.com/RaytonXia/social-science-quantitative-methods-handbook/releases/download/v1.0.2/QuantMethodsHandbook_v1.0.2_Setup.exe) | 双击安装，完成后从开始菜单打开手册。 |
-| 不安装，解压就用 | [QuantMethodsHandbook_v1.0.2.zip](https://github.com/RaytonXia/social-science-quantitative-methods-handbook/releases/download/v1.0.2/QuantMethodsHandbook_v1.0.2.zip) | **完整解压**，进入解压后的文件夹，双击 `社会科学量化方法自学手册_v1.0.2.exe`。 |
+| 安装到电脑上，**推荐初次使用** | [QuantMethodsHandbook_v1.1.1_Setup.exe](https://github.com/RaytonXia/social-science-quantitative-methods-handbook/releases/download/v1.1.1/QuantMethodsHandbook_v1.1.1_Setup.exe) | 双击安装，完成后从开始菜单打开手册。 |
+| 不安装，解压就用 | [QuantMethodsHandbook_v1.1.1.zip](https://github.com/RaytonXia/social-science-quantitative-methods-handbook/releases/download/v1.1.1/QuantMethodsHandbook_v1.1.1.zip) | **完整解压**，进入解压后的文件夹，双击 `社会科学量化方法自学手册_v1.1.1.exe`。 |
 
 **不要只拿走 EXE，也不要在压缩包里直接运行。** 旁边的 `app` 文件夹、DLL 和配置文件都要保留。GitHub 的 **Source code** 是维护源码，初次使用不用下载它。
 
-当前版本为 **v1.0.2**，支持 Windows 10 / 11 **64 位**，需要 .NET Framework 4.6.2 或更高版本及 Microsoft Edge WebView2 Runtime。缺少 WebView2 时，安装向导会提示联网安装微软组件；已有组件时可以离线安装。安装包目前没有代码签名。Android 版尚未同步本版，因此这里暂不提供 APK。
+当前版本为 **v1.1.1**，可查看[更新说明](docs/releases/v1.1.1.md)。支持 Windows 10 / 11 **64 位**，需要 .NET Framework 4.6.2 或更高版本及 Microsoft Edge WebView2 Runtime。缺少 WebView2 时，安装向导会提示联网安装微软组件；已有组件时可以离线安装。安装包目前没有代码签名。Android 版尚未同步本版，因此这里暂不提供 APK。
 
-第一次打开，点首页的 **“从零开始”**。已经有具体问题，就进 **“方法词典”** 搜索。下载页的 `SHA256_v1.0.2.txt` 可用于核对文件是否完整；测试范围见[发行检查记录](https://github.com/RaytonXia/social-science-quantitative-methods-handbook/blob/main/docs/RELEASE_CHECKS.md)。
+第一次打开，点首页的 **“从零开始”**。已经有具体问题，就进 **“方法词典”** 搜索。下载页的 `SHA256_v1.1.1.txt` 可用于核对文件是否完整；测试范围见[发行检查记录](https://github.com/RaytonXia/social-science-quantitative-methods-handbook/blob/main/docs/RELEASE_CHECKS.md)。
 
 ## 看看怎么用
 
@@ -51,9 +51,9 @@ Windows 10 / 11 x64 · 中文讲解与英文术语对照 · R 示例为主 · �
 
 打开一个方法，按六个问题往下看：**它解决什么问题 → 原理怎么理解 → 需要什么数据和条件 → 结果先看哪些指标 → 实际怎么做 → 能得出什么结论、有哪些局限。**
 
-例如，学习响应面分析（RSA）时，可以对照数值和图形理解 **a1、a2、a3、a4**：它们分别表示什么，正负号怎么读，哪些情况下还不能据此下结论。结果表会指出该看哪个数，并解释这个数的变化意味着什么。
+例如，学习响应面分析（RSA）时，可以对照数值和图形理解 **a1、a2、a3、a4**：它们分别表示什么，正负号怎么读，哪些情况下还不能据此下结论。指标卡会指出先看哪个数，再解释它的单位、正负、大小、区间和常见误读。返回按钮可以带你回到刚才的方法与阅读位置，搜索条件和展开内容也会保留。
 
-![响应面分析：对照关键指标、具体数值和图形学习怎样看结果](docs/images/method-results.jpg)
+![响应面分析：对照关键指标、具体数值和图形学习怎样看结果](docs/images/method-results-v1.1.1.png)
 
 ### 2. 不知道从哪开始，就跟着做一项研究
 
@@ -90,15 +90,21 @@ Windows 10 / 11 x64 · 中文讲解与英文术语对照 · R 示例为主 · �
 
 ### 5. 记住学到哪里，把自己的理解留下来
 
-在方法页收藏、做笔记、标记学习状态，再到“我的学习”查看学习进度和复习安排。课程草稿也会保留，方便继续写。
+在方法页收藏、做笔记、标记学习状态，再到“我的学习”查看学习进度和复习安排。方法页的四张学习检查卡片会记住已做过的练习，并可安排复习。课程草稿也会保留，方便继续写。
 
 换电脑或清理设备前，在“我的学习”**导出备份**；到新设备后再导入。自行导入的 PDF 原件需要另存一份，不包含在学习记录备份里。
+
+![方法页学习记录：勾选已完成的练习，安排下一次复习](docs/images/study-tracker-v1.1.1.png)
 
 ![我的学习：汇总收藏、学习状态、笔记与复习安排](docs/images/study-records.jpg)
 
 ### 6. 有疑问时，可以手动开启 AI 助手
 
-点击顶端的“AI 助手”，开启后选择 **DeepSeek、OpenAI、Claude 或 Gemini**，填入自己的 API Key 和模型名称，就能围绕不懂的内容继续问。也可以主动勾选，把当前方法的教学说明附给助手。
+点击顶端或右下角的“AI 助手”，开启后选择 **DeepSeek、OpenAI、Claude 或 Gemini**，填入自己的 API Key 和模型名称，就能围绕不懂的内容继续问。也可以主动勾选，把当前方法的教学说明附给助手。
+
+助手以悬浮面板显示，可以一边阅读一边问。点击右上角的叉号或按 Esc 收起，本次配置、对话和未发送的问题会保留；切换方法后可以接着问。
+
+![悬浮 AI 助手：阅读正文时也可以展开、收起和继续提问](docs/images/assistant-panel-v1.1.1.png)
 
 **AI 默认关闭，不影响离线学习。** 本项目不提供共享密钥；调用可能产生服务商费用。AI 回答适合帮助理解，统计结论和引用仍要对照原始文献核实。
 
@@ -110,7 +116,7 @@ Windows 10 / 11 x64 · 中文讲解与英文术语对照 · R 示例为主 · �
 | 离线查词 | 查询本地词典，不需要联网。 |
 | 段落翻译 | 确认后，把**选中的文字**发送给 MyMemory，不会整份上传 PDF。 |
 | AI 问答 | 只有主动发送问题或读取模型列表时才连接所选服务商。不会自动发送笔记、阅读历史或导入文件。 |
-| API Key 与 AI 对话 | 只保留在本次运行的内存中；关闭助手或退出应用后清除，不写入学习记录备份。 |
+| API Key 与 AI 对话 | 只保留在本次运行的内存中。收起面板会保留；点击“关闭并清空”或退出应用后清除，不写入学习记录备份。 |
 
 ## 为什么做这本手册
 
@@ -122,7 +128,7 @@ Windows 10 / 11 x64 · 中文讲解与英文术语对照 · R 示例为主 · �
 
 ## 许可
 
-**未经作者事先书面同意，不得将项目自有代码或原创教学内容用于商业目的。**
+**未经本人允许不得用于商业目的。** 项目自有代码和原创教学内容的商业使用，须事先取得作者书面同意。
 
 - 自有代码允许署名后非商业使用、修改和再分发，具体见 [代码许可](LICENSE)。这是提供源码的非商业项目，不是采用 OSI 开源许可的项目。
 - 原创教学内容采用 [CC BY-NC 4.0](LICENSE-CONTENT.md)。
