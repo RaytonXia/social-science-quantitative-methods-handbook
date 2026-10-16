@@ -10,6 +10,7 @@
 *.nsh text eol=crlf
 *.dll binary
 *.ico binary
+*.gif binary
 *.woff2 binary
 *.ttf binary
 *.wasm binary
